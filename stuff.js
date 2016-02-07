@@ -12,18 +12,19 @@ var sizeX = 5;
 var sizeY = 5;
 var ctx;
 var canvas;
-var paint  = true;
+var paint  = false;
 var ev;
 var smoothness = 100;
 function mov(event){
     ev = event;
+    cpaint();
 }
 function mdown(){
 
     paint = true;
-
+    cpaint();
 }
-var myVar = setInterval(cpaint, 100/smoothness);
+
 function mup(){
 
     paint = false;
