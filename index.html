@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSRobo or is it?</title>
+    <script type="text/javascript" src="stuff.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+        .wrapper {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+        }
+        .footer, .push {
+            position:fixed;
+            bottom: 0px;
+            width: 100%;
+        }
+        #hist{
+            width: 650px;
+            height: 720px;
+            overflow: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>
+                <canvas id="canvas" width="400" height="800" onmouseout="mup()"
+                        onmousemove="mov(event)" onmousedown="mdown()" onmouseup="mup()"></canvas>
+            </td>
+            <td>
+                <section id="hist" style="background-color: cornflowerblue;color:aliceblue">
+                    <h2>History</h2>
+
+
+                </section>
+
+
+                <section class="footer">
+                    <form>
+                        <input type="text" name="zaa" id="a" size="100px" required autofocus placeholder="JS Code here">
+                        <input type="button" id="qq" onclick="foo()" >
+                    </form>
+                </section>
+            </td>
+            <td>
+                <section style="background-color: aquamarine;color: cadetblue">
+                    <h3>Commands</h3>
+                    <p>canvas->canvas</p>
+                    <p>ctx->canvas context</p>
+                    <p>sizeX->x width of brush</p>
+                    <p>sizeY->y height of brush</p>
+                    <p>clear()->clear history</p>
+                    <p>clc()->reset canvas and page</p>
+                    <p>textcolor(color)->set console text color</p>
+                    <p>bgcolor(color)->set console background color</p>
+                </section>
+
+            </td>
+        </tr>
+
+    </table>
+
+
+
+
+
+
+
+</body>
+</html>
