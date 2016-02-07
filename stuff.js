@@ -1,13 +1,6 @@
 /**
  * Created by Fatih on 03/02/2016.
  */
-
-var specials = {}
-specials.log =0;
-specials.clear=1;
-specials.clc=2;
-specials.bgcolor=3;
-specials.textcolor=4;
 var sizeX = 5;
 var sizeY = 5;
 var ctx;
@@ -15,6 +8,21 @@ var canvas;
 var paint  = false;
 var ev;
 var smoothness = 100;
+var specials = {}
+function load(){
+    canvas = document.getElementById("canvas");
+    ctx = canvas.getContext("2d");
+    ctx.fillStyle = "rgba(230,230,230,1)"
+
+    specials.log =0;
+    specials.clear=1;
+    specials.clc=2;
+    specials.bgcolor=3;
+    specials.textcolor=4;
+
+}
+
+
 function mov(event){
     ev = event;
     cpaint();
@@ -32,7 +40,7 @@ function mup(){
 
 function cpaint(){
     if(paint){
-        var ctx = document.getElementById("canvas").getContext("2d");
+
         var tempX = ev.pageX;
         var tempY = ev.pageY;
         ctx.fillRect(tempX-sizeX/2,tempY-sizeY/2,sizeX,sizeY,50);

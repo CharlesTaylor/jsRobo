@@ -8,6 +8,7 @@
     <style>
         * {
             margin: 0;
+            background-color:#262626;
         }
         html, body {
             height: 100%;
@@ -29,9 +30,12 @@
             overflow: auto;
             margin-bottom: 10px;
         }
+        input{
+            color: #F8F8F8;
+        }
     </style>
 </head>
-<body>
+<body onload="load()">
 
     <table>
         <tr>
@@ -40,7 +44,7 @@
                         onmousemove="mov(event)" onmousedown="mdown()" onmouseup="mup()"></canvas>
             </td>
             <td>
-                <section id="hist" style="background-color: cornflowerblue;color:aliceblue">
+                <section id="hist" style="background-color:#383838;color:#E8E8E8">
                     <h2>History</h2>
 
 
@@ -55,7 +59,7 @@
                 </section>
             </td>
             <td>
-                <section style="background-color: aquamarine;color: cadetblue">
+                <section style="background-color: transparent;1818;color:#86C1B9">
                     <h3>Commands</h3>
                     <p>canvas->canvas</p>
                     <p>ctx->canvas context</p>
