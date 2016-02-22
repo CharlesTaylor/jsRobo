@@ -19,7 +19,7 @@ function load(){
     specials.clc=2;
     specials.bgcolor=3;
     specials.textcolor=4;
-
+    specials.style=5;
 }
 
 
@@ -90,6 +90,9 @@ function foo(){
             var fun =  com.substring(com.indexOf("(")+1,com.lastIndexOf(")"));
             console.log(fun);
             sec.style.color =fun;
+        }
+        else if(specials[comt]==5){
+
         }
     }else{
         eval(com);
